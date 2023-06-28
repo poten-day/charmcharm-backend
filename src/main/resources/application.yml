@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active:
+      - local
+    group:
+      local:
+        - web-local
+        - db-local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: web-local
+  application:
+    name: charmcharm-api
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: db-local
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:charm-charm-local;MODE=MYSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  sql:
+    init:
+      schema-locations: classpath*:schema-local.sql
+      data-locations: classpath*:data-local.sql
