@@ -8,7 +8,7 @@ VALUES ('내가 생각하는 [name_space]의 장점은?', 3, false,
 
 INSERT INTO question_form (question_title, min_answer_count, is_single_choice, question_options)
 VALUES ('[name_space]를 생각하면 떠오르는 색깔은?', 1, true,
-        '1|🌹 빨간색,1|🍊 주황색,2|🍋 노란색,3|🍏 초록색,4|🦋 파란색,5|❄️ 하늘색,6|🍑 핑크색,7|🌩 흰색,8|🎱 검은색');
+        '1|🌹 빨간색,2|🍊 주황색,3|🍋 노란색,4|🍏 초록색,5|🦋 파란색,6|❄️ 하늘색,7|🍑 핑크색,8|🌩 흰색,9|🎱 검은색');
 
 INSERT INTO question_form (question_title, min_answer_count, is_single_choice, question_options)
 VALUES ('[name_space]의 능력 중 부러운 것은?', 3, false,
